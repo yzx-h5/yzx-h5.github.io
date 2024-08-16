@@ -1,0 +1,58 @@
+@import '@/theme/index.scss';
+
+.position-relative {
+  position: relative;
+}
+
+.mg-t-10 {
+  margin-top: 10px;
+}
+
+.mg-t-20 {
+  margin-top: 20px;
+}
+
+
+.mg-b-10 {
+  margin-bottom: 10px;
+}
+
+.pd-right-24 {
+  .native-input {
+    padding-right: 25px;
+  }
+}
+
+
+#login-page, #signup-page, #support-page {
+  .login-logo {
+    padding: 20px 0;
+    min-height: 200px;
+    text-align: center;
+  }
+  
+  .login-logo img {
+    max-width: 150px;
+  }
+  
+  .list {
+    margin-bottom: 0;
+  }
+  
+}
+
+.forgot-password-box {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 13px;
+  padding-top: 5px;
+  cursor: pointer;
+  a {
+    color: var(--orange-color);
+  }
+  &:hover {
+    a {
+      color: var(--background-hover);
+    }
+  }
+}

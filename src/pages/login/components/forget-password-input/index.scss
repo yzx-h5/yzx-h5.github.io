@@ -1,0 +1,102 @@
+@import '@/theme/index.scss';
+
+.position-relative {
+  position: relative;
+}
+
+.mg-t-10 {
+  margin-top: 10px;
+}
+
+.mg-t-20 {
+  margin-top: 20px;
+}
+
+
+.mg-b-10 {
+  margin-bottom: 10px;
+}
+
+.pd-right-24 {
+  .native-input {
+    padding-right: 25px;
+  }
+}
+
+
+#login-page, #signup-page, #support-page {
+  .login-logo {
+    padding: 20px 0;
+    min-height: 200px;
+    text-align: center;
+  }
+  
+  .login-logo img {
+    max-width: 150px;
+  }
+  
+  .list {
+    margin-bottom: 0;
+  }
+  
+}
+
+.range-color {
+  color: var(--orange-color);
+}
+
+.code-input {
+  min-height: 70px !important;
+  border: none;
+  color: transparent;
+  opacity: 0;
+  background: transparent;
+  box-shadow: none !important;
+}
+.code-input:focus {
+  border: none;
+  box-shadow: none;
+}
+
+.code-ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(6, 50px); /* 设置6列，每列宽度为30px */
+  gap: 5px; /* 设置列之间的间隙 */
+  padding: 0; /* 去除默认的列表样式 */
+  position: absolute;
+}
+
+.code-ul li {
+  width: 45px;
+  height: 50px;
+  border: 1px solid #bdbcbc;
+  border-radius: 5px;
+  line-height: 50px;
+  padding-left: 17px;
+  font-size: 16px;
+}
+
+.code-ul li:not(:empty) + li {
+  border: 1px solid #e87722;
+}
+
+.code-ul li:first-child {
+  border: 1px solid #e87722;
+}
+
+.code-label {
+  font-size: 12px;
+  &::after{
+    content: ' *';
+    color: red;
+  }
+}
+
+.normalcy-label {
+  .label-text {
+    font-family: var(--ion-font-family);
+    font-weight:normal;
+    color: var(--ion-text-color, #000);
+  }
+}

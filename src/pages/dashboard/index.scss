@@ -1,0 +1,99 @@
+@import '@/theme/index.scss';
+
+ion-header {
+  ion-toolbar {
+    --border-width: 0 !important;
+    --border-style: none !important;
+    --background: #fbfbfb;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.24);
+  }
+}
+
+ion-content {
+  position: relative;
+  --background: transparent;
+  z-index: 1;
+  color: white;
+  padding: 20px;
+  #background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    background-image: url(../../../src/assets/images/login_bg_1.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  .background-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+}
+
+.user-avatar {
+  height: 40px;
+  width: 40px;
+  box-sizing: border-box;
+  text-align: center;
+  overflow: hidden;
+  object-fit: cover;
+  &::part(image) {
+    border-radius: 50%;
+  }
+}
+
+.close-btn {
+  color: var(--orange-color);
+  min-height: 20px;
+  font-size: 20px;
+  padding-bottom: 3px;
+}
+
+.menu-item {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-top: 1px solid #eeeeee;
+  font-size: 15px;
+  color: #333333;
+  & span {
+    margin-left: 10px;
+  }
+}
+
+.products-ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+  margin: 0;
+}
+
+.user-info-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  .user-name {
+    padding: 5px;
+  }
+}

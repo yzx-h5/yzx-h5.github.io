@@ -1,0 +1,212 @@
+.login-body {
+  position: relative;
+  height: 100%;
+  overflow-x: auto;
+  font-family: FWDCircular;
+  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  z-index: -1;
+  background-image: url(../../../src/assets/images/login_bg_1.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.login-img {
+  position: absolute;
+  right: -16%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../src/assets/images/login_bg_2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  z-index: 1;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(-51%);
+  }
+  50% {
+    transform: translateY(-49%);
+  }
+  100% {
+    transform: translateY(-51%);
+  }
+}
+
+.login-logo {
+  width: 400px;
+  height: 160px;
+  background-image: url(../../../src/assets/images/login_logo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+
+.title {
+  min-width: 300px;
+  background: #333;
+  text-align: center;
+  padding: 10px 10px 0 10px;
+  .logo {
+    display: inline-block;
+    width: 171px;
+    height: 86px;
+    background-image: url(../../../src/assets/images/login-logo.png);
+    background-size: 70% 70%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+}
+
+.contents {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  --background: transparent;
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 20px;
+  z-index: 2;
+  .countdown {
+    font-size: 27px;
+    background: linear-gradient(45deg, #ffee91, #a26259);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin: 10px;
+    font-family: 'Arial', sans-serif;
+  }
+  .second-title {
+    font-size: 25px;
+    color: #fff;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 22px;
+  }
+
+  .input-box{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    animation: slide 0.5s;
+    color: #ffffff;
+    --ion-background-color: transparent;
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(10px);
+    position: relative;
+    &-title {
+      display: flex;
+      height: 36px;
+      background-color: #5e5e5e8b;
+      border-radius: 10px;
+      &-left {
+        width: 50%;
+        background-image: url(../../../src/assets/images/title_bg_1.png);
+        background-repeat: no-repeat;
+        background-position: 100%;
+        background-size: cover;
+        border-top-left-radius: 10px;
+      }
+      &-right {
+        width: 50%;
+        background-image: url(../../../src/assets/images/title_bg_2.png);
+        background-repeat: no-repeat;
+        background-position: 100%;
+        background-size: cover;
+        border-top-right-radius: 10px;
+      }
+      &-content {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 21px;
+        padding-top: 2px;
+      }
+    }
+    &>form {
+     padding: 0 20px 20px 20px;
+    }
+    &>form>.list-ios {
+      ion-input {
+        & .label-text {
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}
+
+@keyframes slide {
+  from {
+    opacity: 0;
+    left: -100px;
+  }
+
+  to {
+    opacity: 1;
+    left: 0;
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .contents {
+    .input-box{
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contents {
+    justify-content: flex-end;
+    padding-bottom: 150px;
+  }
+
+  .login-logo {
+     display: none;
+  }
+
+  .input-box,
+  .countdown {
+    width: 85vw !important;
+  }
+
+  .login-img {
+    top: 50%;
+    right: 0;
+    background-image: url(../../../src/assets/images/login_bg_3.png);
+  }
+}
+
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  --ion-background-color: #e8792467;
+  --ion-text-color: #ffffff;
+  --ion-color-primary: #ffffff;
+  .footer-text{
+    text-align: center;
+    font-size: 12px;
+  }
+}
+

@@ -1,8 +1,5 @@
 {
-  "name": "test",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "react-vite",
-  "id": "0a3e51ca"
+  "name": "react-ionic",
+  "integrations": {},
+  "type": "react-vite"
 }

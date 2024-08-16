@@ -1,0 +1,72 @@
+@import '@/theme/index.scss';
+
+.product-card {
+  width: 30%;
+  min-width: 350px;
+
+  --background: transparent;
+  --color: #666666;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.24);
+  margin: 10px;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.24);
+  }
+  & img {
+    width: 100%;
+    min-height: 250px;
+    object-fit: cover;
+  }
+  ion-card-header {
+    justify-content: space-around;
+    padding-top: 5px;
+    padding-inline: 10px;
+    padding-bottom: 2px;
+  }
+
+  ion-card-title {
+    font-size: 17px;
+    --color:  #666666;
+    margin-bottom: 10px;
+  }
+  
+  ion-card-subtitle {
+    font-size: 10px;
+    --color:  #666666;
+  }
+
+
+  .card-btn {
+    min-height: 35px;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 18px;
+    --border-radius: 5px;
+    --color: #ffffff;
+    --padding-start: 15px;
+    --padding-end: 15px;
+    --padding-top: 0;
+    --padding-bottom: 0;
+  }
+
+  .quote {
+    --background: var(--orange-color);
+    --background-activated: var(--background-hover);
+    --background-focused: var(--background-hover);
+    --background-hover: var(--background-hover);
+  }
+
+  .edit {
+    --background: var(--ion-color-primary);
+    --background-activated: var(--ion-color-primary-tint);
+    --background-focused: var(--ion-color-primary-tint);
+    --background-hover: var(--ion-color-primary-tint);
+  }
+
+  .delete {
+    --background: var(--ion-color-danger);
+    --background-activated: var(--ion-color-danger-tint);
+    --background-focused: var(--ion-color-danger-tint);
+    --background-hover: var(--ion-color-danger-tint);
+  }
+}

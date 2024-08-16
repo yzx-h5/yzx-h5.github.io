@@ -1,0 +1,39 @@
+.input-field {
+  display: flex;
+  flex-direction: column;
+  .label-text {
+    color: #333333;
+    font-weight: bold;
+    font-size:14px;
+  }
+  .input-wrapper {
+   flex: 1 1 auto;
+   .native-input {
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+      -moz-appearance: textfield;
+    }
+   }
+  }
+}
+.red-label {
+  .label-text{
+  }
+}
+
+.required-label {
+  .label-text::after{
+    content: ' *';
+    color: red;
+  }
+}
+
+.eye-icon {
+  width: 16px;
+  height: 22px;
+  position: absolute;
+  right: 0;
+  bottom: 5px;
+  z-index: 99;
+}
